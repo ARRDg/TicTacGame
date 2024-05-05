@@ -46,5 +46,12 @@ namespace TicTacGame
         {
 
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Form MM = new MainMenu();
+            MM.Show();
+            Hide();
+        }
     }
 }
