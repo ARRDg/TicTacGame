@@ -36,5 +36,12 @@ namespace TicTacGame
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form MM = new resualtField();
+            MM.Show();
+            Hide();
+        }
     }
 }
