@@ -103,9 +103,9 @@ namespace TicTacGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Рейтинг {
+        internal static System.Drawing.Bitmap ПолеОчков {
             get {
-                object obj = ResourceManager.GetObject("Рейтинг", resourceCulture);
+                object obj = ResourceManager.GetObject("ПолеОчков", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -46,5 +46,12 @@ namespace TicTacGame
         {
 
         }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            Form MM = new GameField();
+            MM.Show();
+            Hide();
+        }
     }
 }
