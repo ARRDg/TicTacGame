@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="resualtField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resualtField.Designer.cs">
+      <DependentUpon>resualtField.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +97,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="resualtField.resx">
+      <DependentUpon>resualtField.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -128,6 +137,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ИгровоеПоле.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\figura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\panelTimer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
