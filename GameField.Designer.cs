@@ -32,14 +32,14 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -82,16 +82,15 @@
             this.guna2Panel1.Size = new System.Drawing.Size(324, 720);
             this.guna2Panel1.TabIndex = 8;
             // 
-            // label1
+            // panel1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Marvin", 40F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(108, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 73);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ты";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.panel1.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(94, 332);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 150);
+            this.panel1.TabIndex = 2;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label2
             // 
@@ -103,6 +102,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Счёт";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Marvin", 40F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(108, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 73);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ты";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -136,15 +146,6 @@
             this.guna2Panel2.Size = new System.Drawing.Size(324, 720);
             this.guna2Panel2.TabIndex = 9;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::TicTacGame.Properties.Resources.ИгровоеПоле;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(412, 176);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 450);
-            this.panel3.TabIndex = 10;
-            // 
             // panel2
             // 
             this.panel2.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
@@ -154,15 +155,14 @@
             this.panel2.Size = new System.Drawing.Size(150, 150);
             this.panel2.TabIndex = 2;
             // 
-            // panel1
+            // panel3
             // 
-            this.panel1.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(94, 332);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 150);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel3.BackgroundImage = global::TicTacGame.Properties.Resources.ИгровоеПоле;
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel3.Location = new System.Drawing.Point(412, 176);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(450, 450);
+            this.panel3.TabIndex = 10;
             // 
             // label5
             // 
