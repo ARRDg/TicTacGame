@@ -63,6 +63,16 @@ namespace TicTacGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ИгровоеПоле {
+            get {
+                object obj = ResourceManager.GetObject("ИгровоеПоле", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap КарточкаНуб {
             get {
                 object obj = ResourceManager.GetObject("КарточкаНуб", resourceCulture);
@@ -103,9 +113,9 @@ namespace TicTacGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Рейтинг {
+        internal static System.Drawing.Bitmap ПолеОчков {
             get {
-                object obj = ResourceManager.GetObject("Рейтинг", resourceCulture);
+                object obj = ResourceManager.GetObject("ПолеОчков", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

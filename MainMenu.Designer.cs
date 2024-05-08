@@ -32,6 +32,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -122,6 +122,18 @@
             this.tabPage1.Size = new System.Drawing.Size(1248, 612);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Главное меню";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Marvin", 38F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Black;
+            this.label15.Location = new System.Drawing.Point(352, 12);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(547, 69);
+            this.label15.TabIndex = 6;
+            this.label15.Text = "Крестики-нолики";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // tabPage2
             // 
@@ -210,6 +222,7 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(308, 445);
             this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click_1);
             // 
             // panel1
             // 
@@ -479,18 +492,6 @@
             this.label1.Size = new System.Drawing.Size(520, 65);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ваша статистика";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Marvin", 38F, System.Drawing.FontStyle.Bold);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(352, 12);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(547, 69);
-            this.label15.TabIndex = 6;
-            this.label15.Text = "Крестики-нолики";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // MainMenu
             // 

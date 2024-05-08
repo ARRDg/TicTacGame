@@ -32,11 +32,14 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -107,6 +110,17 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Счёт";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Marvin", 40F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(108, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 73);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ты";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
