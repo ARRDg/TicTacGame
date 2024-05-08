@@ -63,6 +63,26 @@ namespace TicTacGame.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap figura {
+            get {
+                object obj = ResourceManager.GetObject("figura", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap panelTimer {
+            get {
+                object obj = ResourceManager.GetObject("panelTimer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ИгровоеПоле {
             get {
                 object obj = ResourceManager.GetObject("ИгровоеПоле", resourceCulture);
