@@ -98,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Marvin", 42F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label3.Location = new System.Drawing.Point(26, 5);
+            this.label3.Location = new System.Drawing.Point(25, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 75);
             this.label3.TabIndex = 3;
