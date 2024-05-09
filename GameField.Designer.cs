@@ -41,9 +41,21 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.cell00 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell10 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell20 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell21 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell11 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell01 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell22 = new Guna.UI2.WinForms.Guna2Button();
+            this.cell12 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.cell02 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -96,7 +108,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(150, 150);
             this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label6
             // 
@@ -119,7 +130,6 @@
             this.label2.Size = new System.Drawing.Size(145, 62);
             this.label2.TabIndex = 1;
             this.label2.Text = "Счёт";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -130,7 +140,6 @@
             this.label1.Size = new System.Drawing.Size(125, 73);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ты";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -186,15 +195,6 @@
             this.label7.Text = "0";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = global::TicTacGame.Properties.Resources.ИгровоеПоле;
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel3.Location = new System.Drawing.Point(412, 176);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(450, 450);
-            this.panel3.TabIndex = 10;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -216,20 +216,191 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // cell00
+            // 
+            this.cell00.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell00.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell00.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell00.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell00.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell00.ForeColor = System.Drawing.Color.White;
+            this.cell00.Location = new System.Drawing.Point(403, 144);
+            this.cell00.Name = "cell00";
+            this.cell00.Size = new System.Drawing.Size(135, 135);
+            this.cell00.TabIndex = 13;
+            this.cell00.Click += new System.EventHandler(this.cell00_Click);
+            // 
+            // cell10
+            // 
+            this.cell10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell10.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell10.ForeColor = System.Drawing.Color.White;
+            this.cell10.Location = new System.Drawing.Point(403, 316);
+            this.cell10.Name = "cell10";
+            this.cell10.Size = new System.Drawing.Size(135, 135);
+            this.cell10.TabIndex = 14;
+            this.cell10.Click += new System.EventHandler(this.cell10_Click);
+            // 
+            // cell20
+            // 
+            this.cell20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell20.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell20.ForeColor = System.Drawing.Color.White;
+            this.cell20.Location = new System.Drawing.Point(403, 488);
+            this.cell20.Name = "cell20";
+            this.cell20.Size = new System.Drawing.Size(135, 135);
+            this.cell20.TabIndex = 15;
+            this.cell20.Click += new System.EventHandler(this.cell20_Click);
+            // 
+            // cell21
+            // 
+            this.cell21.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell21.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell21.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell21.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell21.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell21.ForeColor = System.Drawing.Color.White;
+            this.cell21.Location = new System.Drawing.Point(575, 488);
+            this.cell21.Name = "cell21";
+            this.cell21.Size = new System.Drawing.Size(135, 135);
+            this.cell21.TabIndex = 18;
+            this.cell21.Click += new System.EventHandler(this.cell21_Click);
+            // 
+            // cell11
+            // 
+            this.cell11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell11.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell11.ForeColor = System.Drawing.Color.White;
+            this.cell11.Location = new System.Drawing.Point(575, 316);
+            this.cell11.Name = "cell11";
+            this.cell11.Size = new System.Drawing.Size(135, 135);
+            this.cell11.TabIndex = 17;
+            this.cell11.Click += new System.EventHandler(this.cell11_Click);
+            // 
+            // cell01
+            // 
+            this.cell01.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell01.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell01.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell01.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell01.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell01.ForeColor = System.Drawing.Color.White;
+            this.cell01.Location = new System.Drawing.Point(575, 144);
+            this.cell01.Name = "cell01";
+            this.cell01.Size = new System.Drawing.Size(135, 135);
+            this.cell01.TabIndex = 16;
+            this.cell01.Click += new System.EventHandler(this.cell01_Click);
+            // 
+            // cell22
+            // 
+            this.cell22.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell22.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell22.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell22.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell22.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell22.ForeColor = System.Drawing.Color.White;
+            this.cell22.Location = new System.Drawing.Point(747, 488);
+            this.cell22.Name = "cell22";
+            this.cell22.Size = new System.Drawing.Size(135, 135);
+            this.cell22.TabIndex = 21;
+            this.cell22.Click += new System.EventHandler(this.cell22_Click);
+            // 
+            // cell12
+            // 
+            this.cell12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell12.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell12.ForeColor = System.Drawing.Color.White;
+            this.cell12.Location = new System.Drawing.Point(747, 316);
+            this.cell12.Name = "cell12";
+            this.cell12.Size = new System.Drawing.Size(135, 135);
+            this.cell12.TabIndex = 20;
+            this.cell12.Click += new System.EventHandler(this.cell12_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Location = new System.Drawing.Point(544, 127);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(25, 508);
+            this.panel3.TabIndex = 22;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
+            this.panel4.Location = new System.Drawing.Point(716, 127);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(25, 508);
+            this.panel4.TabIndex = 23;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Black;
+            this.panel5.Location = new System.Drawing.Point(385, 457);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(514, 25);
+            this.panel5.TabIndex = 24;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Black;
+            this.panel6.Location = new System.Drawing.Point(385, 285);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(514, 25);
+            this.panel6.TabIndex = 25;
+            // 
+            // cell02
+            // 
+            this.cell02.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.cell02.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.cell02.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.cell02.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell02.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cell02.ForeColor = System.Drawing.Color.White;
+            this.cell02.Location = new System.Drawing.Point(747, 144);
+            this.cell02.Name = "cell02";
+            this.cell02.Size = new System.Drawing.Size(135, 135);
+            this.cell02.TabIndex = 19;
+            this.cell02.Click += new System.EventHandler(this.cell02_Click);
+            // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(167)))), ((int)(((byte)(167)))));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel5);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.cell22);
+            this.Controls.Add(this.cell12);
+            this.Controls.Add(this.cell02);
+            this.Controls.Add(this.cell21);
+            this.Controls.Add(this.cell11);
+            this.Controls.Add(this.cell01);
+            this.Controls.Add(this.cell20);
+            this.Controls.Add(this.cell10);
+            this.Controls.Add(this.cell00);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GameField";
             this.Text = "GameField";
+            this.Load += new System.EventHandler(this.GameField_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -255,10 +426,22 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private Guna.UI2.WinForms.Guna2Button cell22;
+        private Guna.UI2.WinForms.Guna2Button cell12;
+        private Guna.UI2.WinForms.Guna2Button cell02;
+        private Guna.UI2.WinForms.Guna2Button cell21;
+        private Guna.UI2.WinForms.Guna2Button cell11;
+        private Guna.UI2.WinForms.Guna2Button cell01;
+        private Guna.UI2.WinForms.Guna2Button cell20;
+        private Guna.UI2.WinForms.Guna2Button cell10;
+        private Guna.UI2.WinForms.Guna2Button cell00;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

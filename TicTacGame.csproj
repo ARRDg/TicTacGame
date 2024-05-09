@@ -184,16 +184,10 @@
     <None Include="Resources\МенюСтатистики.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Рейтинг.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Рейтинг1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ПолеОчков.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ИгровоеПоле.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\figura.png" />
