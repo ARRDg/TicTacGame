@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Windows.Forms;
-using static Org.BouncyCastle.Asn1.Cmp.Challenge;
 
 namespace TicTacGame
 {
     public partial class GameField : Form
     {
-        static public int koef;
+        static public int botDifficulty, scorePlayer, ScoreBot, currentRound;
         static public int[,] field = { { -1, -1, -1 },
                                        { -1, -1, -1 },
                                        { -1, -1, -1 }  };
@@ -19,7 +18,12 @@ namespace TicTacGame
         }
         private void GameField_Load(object sender, EventArgs e)
         {
-            koef = 10; //временно
+            botDifficulty = 100;
+            scorePlayer = ScoreBot = currentRound = 0;
+
+            label6.Text = scorePlayer.ToString();
+            label7.Text = ScoreBot.ToString();
+            label5.Text = $"Раунд {currentRound}/3";
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
@@ -36,99 +40,92 @@ namespace TicTacGame
         }
 
 
-
-
-
-
-        public void MoveBot()
+        private async void MoveBot()
         {
-            if (!MovePlayer && CheckWinner() == -1)
+            Random random = new Random();
+            int randomValue = random.Next(1, 101);
+
+            await Task.Delay(600);
+            if (botDifficulty >= randomValue)
             {
                 int bestScore = int.MinValue;
                 int bestRow = -1;
                 int bestCol = -1;
 
-                for (int i = 0; i < 3; i++)
+                for (int row = 0; row < 3; row++)
                 {
-                    for (int j = 0; j < 3; j++)
+                    for (int col = 0; col < 3; col++)
                     {
-                        if (field[i, j] == -1)
+                        if (field[row, col] == -1)
                         {
-                            field[i, j] = 1;
-                            int score = Minimax(field, false);
-                            field[i, j] = -1;
+                            field[row, col] = 0;
+                            int score = Minimax(field, 0, false);
+                            field[row, col] = -1;
 
                             if (score > bestScore)
                             {
                                 bestScore = score;
-                                bestRow = i;
-                                bestCol = j;
+                                bestRow = row;
+                                bestCol = col;
                             }
                         }
                     }
                 }
 
-                field[bestRow, bestCol] = 0;
-
-                switch (bestRow.ToString() + bestCol.ToString())
+                if (bestRow != -1 && bestCol != -1)
                 {
-                    case "00":
-                        cell00.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "01":
-                        cell01.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "02":
-                        cell02.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "10":
-                        cell10.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "11":
-                        cell11.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "12":
-                        cell12.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "20":
-                        cell20.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "21":
-                        cell21.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
-                    case "22":
-                        cell22.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
-                        break;
+                    field[bestRow, bestCol] = 0;
+                    UpdateCellImage(bestRow, bestCol, global::TicTacGame.Properties.Resources.nol);
                 }
-
-                MovePlayer = true;
             }
             else
             {
-                MessageBox.Show(CheckWinner().ToString(), "Информация о победителе", MessageBoxButtons.OK);
+                int row, col;
+                do
+                {
+                    row = random.Next(0, 3);
+                    col = random.Next(0, 3);
+                } while (field[row, col] != -1);
+
+                field[row, col] = 0;
+                UpdateCellImage(row, col, global::TicTacGame.Properties.Resources.nol);
+            }
+
+            MovePlayer = true;
+            int winner = CheckWinner();
+            if (winner != -2)
+            {
+                HandleEndGame(winner);
+                MovePlayer = false;
             }
         }
 
-        static private int Minimax(int[,] board, bool isMaximizing)
+
+        private int Minimax(int[,] board, int depth, bool isMaximizing)
         {
-            int winner = CheckWinner();
-            if (winner != -1)
+            int result = CheckWinner();
+            if (result != -2)
             {
-                return winner;
+                if (result == 0)
+                    return 10 - depth;
+                else if (result == 1)
+                    return depth - 10;
+                else
+                    return 0;
             }
 
             if (isMaximizing)
             {
                 int bestScore = int.MinValue;
-                for (int i = 0; i < 3; i++)
+                for (int row = 0; row < 3; row++)
                 {
-                    for (int j = 0; j < 3; j++)
+                    for (int col = 0; col < 3; col++)
                     {
-                        if (board[i, j] == -1)
+                        if (board[row, col] == -1)
                         {
-                            board[i, j] = 1;
-                            int score = Minimax(board, false);
-                            board[i, j] = -1;
+                            board[row, col] = 0;
+                            int score = Minimax(board, depth + 1, false);
+                            board[row, col] = -1;
                             bestScore = Math.Max(score, bestScore);
                         }
                     }
@@ -138,15 +135,15 @@ namespace TicTacGame
             else
             {
                 int bestScore = int.MaxValue;
-                for (int i = 0; i < 3; i++)
+                for (int row = 0; row < 3; row++)
                 {
-                    for (int j = 0; j < 3; j++)
+                    for (int col = 0; col < 3; col++)
                     {
-                        if (board[i, j] == -1)
+                        if (board[row, col] == -1)
                         {
-                            board[i, j] = 0;
-                            int score = Minimax(board, true);
-                            board[i, j] = -1;
+                            board[row, col] = 1;
+                            int score = Minimax(board, depth + 1, true);
+                            board[row, col] = -1;
                             bestScore = Math.Min(score, bestScore);
                         }
                     }
@@ -155,126 +152,198 @@ namespace TicTacGame
             }
         }
 
-        static private int CheckWinner()
+
+
+
+
+
+
+        static int CheckWinner()
         {
-            for (int i = 0; i < 3; i++)
+            for (int row = 0; row < 3; row++)
             {
-                if (field[i, 0] != -1 && field[i, 0] == field[i, 1] && field[i, 1] == field[i, 2])
-                    return field[i, 0];
-                if (field[0, i] != -1 && field[0, i] == field[1, i] && field[1, i] == field[2, i])
-                    return field[0, i];
+                if (field[row, 0] == field[row, 1] && field[row, 1] == field[row, 2])
+                {
+                    if (field[row, 0] != -1)
+                        return field[row, 0];
+                }
             }
 
-            if (field[0, 0] != -1 && field[0, 0] == field[1, 1] && field[1, 1] == field[2, 2])
-                return field[0, 0];
-            if (field[0, 2] != -1 && field[0, 2] == field[1, 1] && field[1, 1] == field[2, 0])
-                return field[0, 2];
+            for (int col = 0; col < 3; col++)
+            {
+                if (field[0, col] == field[1, col] && field[1, col] == field[2, col])
+                {
+                    if (field[0, col] != -1)
+                        return field[0, col];
+                }
+            }
 
+            if (field[0, 0] == field[1, 1] && field[1, 1] == field[2, 2])
+            {
+                if (field[0, 0] != -1)
+                    return field[0, 0];
+            }
+
+            if (field[0, 2] == field[1, 1] && field[1, 1] == field[2, 0])
+            {
+                if (field[0, 2] != -1)
+                    return field[0, 2];
+            }
+
+            bool isDraw = true;
+            for (int row = 0; row < 3; row++)
+            {
+                for (int col = 0; col < 3; col++)
+                {
+                    if (field[row, col] == -1)
+                    {
+                        isDraw = false;
+                        break;
+                    }
+                }
+            }
+            if (isDraw)
+                return -1;
+
+            return -2;
+        }
+        private void HandleCellClick(int row, int col)
+        {
+            if (MovePlayer && field[row, col] == -1)
+            {
+                field[row, col] = 1;
+                MovePlayer = false;
+                UpdateCellImage(row, col, global::TicTacGame.Properties.Resources.krest);
+
+                int winner = CheckWinner();
+                if (winner != -2)
+                {
+                    HandleEndGame(winner);
+                }
+                else
+                {
+                    MoveBot();
+                    winner = CheckWinner();
+                    if (winner != -2)
+                    {
+                        HandleEndGame(winner);
+                    }
+                }
+            }
+        }
+        private async void ClearField()
+        {
+            await Task.Delay(1000);
             for (int i = 0; i < 3; i++)
+            {
                 for (int j = 0; j < 3; j++)
-                    if (field[i, j] == -1)
-                        return -1;
+                {
+                    field[i, j] = -1;
+                }
+            }
 
-            return 0;
+            cell00.BackgroundImage = cell01.BackgroundImage = cell02.BackgroundImage =
+            cell10.BackgroundImage = cell11.BackgroundImage = cell12.BackgroundImage =
+            cell20.BackgroundImage = cell21.BackgroundImage = cell22.BackgroundImage = null;
+            MovePlayer = true;
+        }
+        private void HandleEndGame(int winner)
+        {
+            if (winner == 0)
+            {
+                ScoreBot++;
+            }
+            else if (winner == 1)
+            {
+                scorePlayer++;
+            }
+
+            currentRound++;
+
+            label6.Text = scorePlayer.ToString();
+            label7.Text = ScoreBot.ToString();
+            label5.Text = $"Раунд {currentRound}/3";
+
+            if (currentRound < 3)
+            {
+                ClearField();
+            }
+            else
+            {
+                if (ScoreBot > scorePlayer)
+                {
+                    MessageBox.Show("Победил бот!");
+                }
+                else if (scorePlayer > ScoreBot)
+                {
+                    MessageBox.Show("Победил игрок!");
+                }
+                else
+                {
+                    MessageBox.Show("Ничья!");
+                }
+            }
+        }
+        private void UpdateCellImage(int row, int col, System.Drawing.Image image)
+        {
+            switch (row.ToString() + col.ToString())
+            {
+                case "00": cell00.BackgroundImage = image; break;
+                case "01": cell01.BackgroundImage = image; break;
+                case "02": cell02.BackgroundImage = image; break;
+                case "10": cell10.BackgroundImage = image; break;
+                case "11": cell11.BackgroundImage = image; break;
+                case "12": cell12.BackgroundImage = image; break;
+                case "20": cell20.BackgroundImage = image; break;
+                case "21": cell21.BackgroundImage = image; break;
+                case "22": cell22.BackgroundImage = image; break;
+                default: break;
+            }
         }
 
-        public void cell00_Click(object sender, EventArgs e)
+        private void cell00_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[0,0] == -1)
-            {
-                field[0, 0] = 1;
-                MovePlayer = false;
-                cell00.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(0, 0);
         }
 
         private void cell01_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[0, 1] == -1)
-            {
-                field[0, 1] = 1;
-                MovePlayer = false;
-                cell01.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(0, 1);
         }
 
         private void cell02_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[0, 2] == -1)
-            {
-                field[0, 2] = 1;
-                MovePlayer = false;
-                cell02.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(0, 2);
         }
 
         private void cell10_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[1, 0] == -1)
-            {
-                field[1, 0] = 1;
-                MovePlayer = false;
-                cell10.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(1, 0);
         }
 
         private void cell11_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[1, 1] == -1)
-            {
-                field[1, 1] = 1;
-                MovePlayer = false;
-                cell11.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(1, 1);
         }
 
         private void cell12_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[1, 2] == -1)
-            {
-                field[1, 2] = 1;
-                MovePlayer = false;
-                cell12.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(1, 2);
         }
 
         private void cell20_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[2, 0] == -1)
-            {
-                field[2, 0] = 1;
-                MovePlayer = false;
-                cell20.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(2, 0);
         }
 
         private void cell21_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[2, 1] == -1)
-            {
-                field[2, 1] = 1;
-                MovePlayer = false;
-                cell21.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(2, 1);
         }
 
         private void cell22_Click(object sender, EventArgs e)
         {
-            if (MovePlayer && field[2, 2] == -1)
-            {
-                field[2, 2] = 1;
-                MovePlayer = false;
-                cell22.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
-                MoveBot();
-            }
+            HandleCellClick(2, 2);
         }
     }
 }

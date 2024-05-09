@@ -32,11 +32,15 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.cell00 = new Guna.UI2.WinForms.Guna2Button();
@@ -52,14 +56,10 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.cell02 = new Guna.UI2.WinForms.Guna2Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -98,6 +98,30 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(324, 720);
             this.guna2Panel1.TabIndex = 8;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(94, 332);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(150, 150);
+            this.panel1.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label6.Font = new System.Drawing.Font("Marvin", 64F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(9, 10);
+            this.label6.MaximumSize = new System.Drawing.Size(130, 130);
+            this.label6.MinimumSize = new System.Drawing.Size(130, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 130);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "0";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -150,6 +174,30 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(324, 720);
             this.guna2Panel2.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Location = new System.Drawing.Point(83, 332);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(150, 150);
+            this.panel2.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.label7.Font = new System.Drawing.Font("Marvin", 64F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(11, 10);
+            this.label7.MaximumSize = new System.Drawing.Size(130, 130);
+            this.label7.MinimumSize = new System.Drawing.Size(130, 130);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(130, 130);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label5
             // 
@@ -375,50 +423,6 @@
             this.cell02.TabIndex = 19;
             this.cell02.Click += new System.EventHandler(this.cell02_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Location = new System.Drawing.Point(83, 332);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(150, 150);
-            this.panel2.TabIndex = 2;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label7.Font = new System.Drawing.Font("Marvin", 64F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(21, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 116);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::TicTacGame.Properties.Resources.ПолеОчков;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(94, 332);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(150, 150);
-            this.panel1.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
-            this.label6.Font = new System.Drawing.Font("Marvin", 64F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(21, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 116);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // GameField
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -448,12 +452,12 @@
             this.Load += new System.EventHandler(this.GameField_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
