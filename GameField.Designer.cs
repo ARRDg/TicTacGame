@@ -218,112 +218,144 @@
             // 
             // cell00
             // 
+            this.cell00.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell00.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell00.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell00.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell00.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell00.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell00.FocusedColor = System.Drawing.Color.Transparent;
             this.cell00.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell00.ForeColor = System.Drawing.Color.White;
             this.cell00.Location = new System.Drawing.Point(403, 144);
             this.cell00.Name = "cell00";
+            this.cell00.PressedColor = System.Drawing.Color.Empty;
             this.cell00.Size = new System.Drawing.Size(135, 135);
             this.cell00.TabIndex = 13;
             this.cell00.Click += new System.EventHandler(this.cell00_Click);
             // 
             // cell10
             // 
+            this.cell10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell10.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell10.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell10.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell10.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell10.FocusedColor = System.Drawing.Color.Transparent;
             this.cell10.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell10.ForeColor = System.Drawing.Color.White;
             this.cell10.Location = new System.Drawing.Point(403, 316);
             this.cell10.Name = "cell10";
+            this.cell10.PressedColor = System.Drawing.Color.Empty;
             this.cell10.Size = new System.Drawing.Size(135, 135);
             this.cell10.TabIndex = 14;
             this.cell10.Click += new System.EventHandler(this.cell10_Click);
             // 
             // cell20
             // 
+            this.cell20.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell20.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell20.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell20.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell20.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell20.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell20.FocusedColor = System.Drawing.Color.Transparent;
             this.cell20.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell20.ForeColor = System.Drawing.Color.White;
             this.cell20.Location = new System.Drawing.Point(403, 488);
             this.cell20.Name = "cell20";
+            this.cell20.PressedColor = System.Drawing.Color.Empty;
             this.cell20.Size = new System.Drawing.Size(135, 135);
             this.cell20.TabIndex = 15;
             this.cell20.Click += new System.EventHandler(this.cell20_Click);
             // 
             // cell21
             // 
+            this.cell21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell21.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell21.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell21.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell21.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell21.FocusedColor = System.Drawing.Color.Transparent;
             this.cell21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell21.ForeColor = System.Drawing.Color.White;
             this.cell21.Location = new System.Drawing.Point(575, 488);
             this.cell21.Name = "cell21";
+            this.cell21.PressedColor = System.Drawing.Color.Empty;
             this.cell21.Size = new System.Drawing.Size(135, 135);
             this.cell21.TabIndex = 18;
             this.cell21.Click += new System.EventHandler(this.cell21_Click);
             // 
             // cell11
             // 
+            this.cell11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell11.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell11.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell11.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell11.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell11.FocusedColor = System.Drawing.Color.Transparent;
             this.cell11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell11.ForeColor = System.Drawing.Color.White;
             this.cell11.Location = new System.Drawing.Point(575, 316);
             this.cell11.Name = "cell11";
+            this.cell11.PressedColor = System.Drawing.Color.Empty;
             this.cell11.Size = new System.Drawing.Size(135, 135);
             this.cell11.TabIndex = 17;
             this.cell11.Click += new System.EventHandler(this.cell11_Click);
             // 
             // cell01
             // 
+            this.cell01.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell01.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell01.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell01.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell01.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell01.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell01.FocusedColor = System.Drawing.Color.Transparent;
             this.cell01.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell01.ForeColor = System.Drawing.Color.White;
             this.cell01.Location = new System.Drawing.Point(575, 144);
             this.cell01.Name = "cell01";
+            this.cell01.PressedColor = System.Drawing.Color.Empty;
             this.cell01.Size = new System.Drawing.Size(135, 135);
             this.cell01.TabIndex = 16;
             this.cell01.Click += new System.EventHandler(this.cell01_Click);
             // 
             // cell22
             // 
+            this.cell22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell22.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell22.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell22.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell22.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell22.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell22.FocusedColor = System.Drawing.Color.Transparent;
             this.cell22.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell22.ForeColor = System.Drawing.Color.White;
             this.cell22.Location = new System.Drawing.Point(747, 488);
             this.cell22.Name = "cell22";
+            this.cell22.PressedColor = System.Drawing.Color.Empty;
             this.cell22.Size = new System.Drawing.Size(135, 135);
             this.cell22.TabIndex = 21;
             this.cell22.Click += new System.EventHandler(this.cell22_Click);
             // 
             // cell12
             // 
+            this.cell12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell12.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell12.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell12.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell12.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell12.FocusedColor = System.Drawing.Color.Transparent;
             this.cell12.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell12.ForeColor = System.Drawing.Color.White;
             this.cell12.Location = new System.Drawing.Point(747, 316);
             this.cell12.Name = "cell12";
+            this.cell12.PressedColor = System.Drawing.Color.Empty;
             this.cell12.Size = new System.Drawing.Size(135, 135);
             this.cell12.TabIndex = 20;
             this.cell12.Click += new System.EventHandler(this.cell12_Click);
@@ -362,14 +394,18 @@
             // 
             // cell02
             // 
+            this.cell02.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cell02.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cell02.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.cell02.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.cell02.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.cell02.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.cell02.FocusedColor = System.Drawing.Color.Transparent;
             this.cell02.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cell02.ForeColor = System.Drawing.Color.White;
             this.cell02.Location = new System.Drawing.Point(747, 144);
             this.cell02.Name = "cell02";
+            this.cell02.PressedColor = System.Drawing.Color.Empty;
             this.cell02.Size = new System.Drawing.Size(135, 135);
             this.cell02.TabIndex = 19;
             this.cell02.Click += new System.EventHandler(this.cell02_Click);
