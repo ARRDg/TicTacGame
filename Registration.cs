@@ -28,6 +28,7 @@ namespace TicTacGame
             {
                 BDConnection.msCommand.CommandText = @"INSERT INTO users (login, pass) VALUES ('" + log + "', '" + pass + "');";
                 BDConnection.msCommand.ExecuteNonQuery();
+
             }
             catch
             {
