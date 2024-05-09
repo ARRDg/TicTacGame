@@ -91,7 +91,6 @@ namespace TicTacGame
             bool resualt = Authorization.AuthorizationAccount(currentLogin, currentPassword);
             if (resualt)
             {
-                Registration.RegistrationAccount(currentLogin, currentPassword);
                 Form MM = new MainMenu();
                 MM.Show();
                 Hide();

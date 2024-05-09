@@ -132,6 +132,7 @@
     <Compile Include="resualtField.Designer.cs">
       <DependentUpon>resualtField.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateStats.cs" />
     <Compile Include="ValidationLogin.cs" />
     <Compile Include="ValidationPass.cs" />
     <EmbeddedResource Include="Form1.resx">
