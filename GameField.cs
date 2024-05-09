@@ -40,7 +40,7 @@ namespace TicTacGame
 
 
 
-        static private void MoveBot()
+        public void MoveBot()
         {
             if (!MovePlayer && CheckWinner() == -1)
             {
@@ -68,7 +68,39 @@ namespace TicTacGame
                     }
                 }
 
-                field[bestRow, bestCol] = 1;
+                field[bestRow, bestCol] = 0;
+
+                switch (bestRow.ToString() + bestCol.ToString())
+                {
+                    case "00":
+                        cell00.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "01":
+                        cell01.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "02":
+                        cell02.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "10":
+                        cell10.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "11":
+                        cell11.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "12":
+                        cell12.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "20":
+                        cell20.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "21":
+                        cell21.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                    case "22":
+                        cell22.BackgroundImage = global::TicTacGame.Properties.Resources.nol;
+                        break;
+                }
+
                 MovePlayer = true;
             }
             else
@@ -146,12 +178,13 @@ namespace TicTacGame
             return 0;
         }
 
-        private void cell00_Click(object sender, EventArgs e)
+        public void cell00_Click(object sender, EventArgs e)
         {
             if (MovePlayer && field[0,0] == -1)
             {
                 field[0, 0] = 1;
                 MovePlayer = false;
+                cell00.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -162,6 +195,7 @@ namespace TicTacGame
             {
                 field[0, 1] = 1;
                 MovePlayer = false;
+                cell01.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -172,6 +206,7 @@ namespace TicTacGame
             {
                 field[0, 2] = 1;
                 MovePlayer = false;
+                cell02.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -182,6 +217,7 @@ namespace TicTacGame
             {
                 field[1, 0] = 1;
                 MovePlayer = false;
+                cell10.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -192,6 +228,7 @@ namespace TicTacGame
             {
                 field[1, 1] = 1;
                 MovePlayer = false;
+                cell11.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -202,6 +239,7 @@ namespace TicTacGame
             {
                 field[1, 2] = 1;
                 MovePlayer = false;
+                cell12.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -212,6 +250,7 @@ namespace TicTacGame
             {
                 field[2, 0] = 1;
                 MovePlayer = false;
+                cell20.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -222,6 +261,7 @@ namespace TicTacGame
             {
                 field[2, 1] = 1;
                 MovePlayer = false;
+                cell21.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
@@ -232,6 +272,7 @@ namespace TicTacGame
             {
                 field[2, 2] = 1;
                 MovePlayer = false;
+                cell22.BackgroundImage = global::TicTacGame.Properties.Resources.krest;
                 MoveBot();
             }
         }
