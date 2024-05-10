@@ -238,7 +238,7 @@ namespace TicTacGame
             cell20.BackgroundImage = cell21.BackgroundImage = cell22.BackgroundImage = null;
             MovePlayer = true;
         }
-        private void HandleEndGame(int winner)
+        private async void HandleEndGame(int winner)
         {
             if (winner == 0)
             {
@@ -261,6 +261,7 @@ namespace TicTacGame
             }
             else
             {
+                await Task.Delay(1000);
                 Form MM = new resualtField();
                 MM.Show();
                 ClearField();
