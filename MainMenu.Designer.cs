@@ -155,6 +155,7 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(308, 445);
             this.guna2Button3.TabIndex = 5;
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -174,6 +175,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(308, 445);
             this.guna2Button2.TabIndex = 4;
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -244,11 +246,14 @@
             this.label14.Cursor = System.Windows.Forms.Cursors.Default;
             this.label14.Font = new System.Drawing.Font("Marvin", 72F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(197)))), ((int)(((byte)(0)))));
-            this.label14.Location = new System.Drawing.Point(123, 103);
+            this.label14.Location = new System.Drawing.Point(45, 102);
+            this.label14.MaximumSize = new System.Drawing.Size(250, 129);
+            this.label14.MinimumSize = new System.Drawing.Size(250, 129);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 129);
+            this.label14.Size = new System.Drawing.Size(250, 129);
             this.label14.TabIndex = 11;
             this.label14.Text = "1";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 

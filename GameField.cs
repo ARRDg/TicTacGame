@@ -6,7 +6,7 @@ namespace TicTacGame
 {
     public partial class GameField : Form
     {
-        static public int botDifficulty, scorePlayer, ScoreBot, currentRound;
+        static public int botDifficulty, scorePlayer, scoreBot, currentRound;
         static public int[,] field = { { -1, -1, -1 },
                                        { -1, -1, -1 },
                                        { -1, -1, -1 }  };
@@ -16,13 +16,12 @@ namespace TicTacGame
         {
             InitializeComponent();
         }
-        private void GameField_Load(object sender, EventArgs e)
+      private void GameField_Load(object sender, EventArgs e)
         {
-            botDifficulty = 100;
-            scorePlayer = ScoreBot = currentRound = 0;
+            scorePlayer = scoreBot = currentRound = 0;
 
             label6.Text = scorePlayer.ToString();
-            label7.Text = ScoreBot.ToString();
+            label7.Text = scoreBot.ToString();
             label5.Text = $"Раунд {currentRound}/3";
         }
 
@@ -31,14 +30,6 @@ namespace TicTacGame
             BDConnection.CloseBD();
             Application.Exit();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form MM = new resualtField();
-            MM.Show();
-            Hide();
-        }
-
 
         private async void MoveBot()
         {
@@ -251,7 +242,7 @@ namespace TicTacGame
         {
             if (winner == 0)
             {
-                ScoreBot++;
+                scoreBot++;
             }
             else if (winner == 1)
             {
@@ -261,7 +252,7 @@ namespace TicTacGame
             currentRound++;
 
             label6.Text = scorePlayer.ToString();
-            label7.Text = ScoreBot.ToString();
+            label7.Text = scoreBot.ToString();
             label5.Text = $"Раунд {currentRound}/3";
 
             if (currentRound < 3)
@@ -270,18 +261,10 @@ namespace TicTacGame
             }
             else
             {
-                if (ScoreBot > scorePlayer)
-                {
-                    MessageBox.Show("Победил бот!");
-                }
-                else if (scorePlayer > ScoreBot)
-                {
-                    MessageBox.Show("Победил игрок!");
-                }
-                else
-                {
-                    MessageBox.Show("Ничья!");
-                }
+                Form MM = new resualtField();
+                MM.Show();
+                ClearField();
+                Close();
             }
         }
         private void UpdateCellImage(int row, int col, System.Drawing.Image image)

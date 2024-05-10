@@ -42,7 +42,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.cell00 = new Guna.UI2.WinForms.Guna2Button();
             this.cell10 = new Guna.UI2.WinForms.Guna2Button();
             this.cell20 = new Guna.UI2.WinForms.Guna2Button();
@@ -209,16 +208,6 @@
             this.label5.Size = new System.Drawing.Size(277, 54);
             this.label5.TabIndex = 11;
             this.label5.Text = "Раунд 0/3";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(841, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 63);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cell00
             // 
@@ -442,7 +431,6 @@
             this.Controls.Add(this.cell20);
             this.Controls.Add(this.cell10);
             this.Controls.Add(this.cell00);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
@@ -478,7 +466,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
         private Guna.UI2.WinForms.Guna2Button cell22;
         private Guna.UI2.WinForms.Guna2Button cell12;
         private Guna.UI2.WinForms.Guna2Button cell02;

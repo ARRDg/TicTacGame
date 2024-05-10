@@ -148,5 +148,31 @@ namespace TicTacGame
                 return -1;
             }
         }
+
+        internal static int GetPlayerRank(int id)
+        {
+            try
+            {
+                BDConnection.msCommand.CommandText = "SELECT COUNT(*) + 1 " +
+                              "FROM users " +
+                              "WHERE win > (SELECT win FROM users WHERE id = '" + id +"')";
+                object result = BDConnection.msCommand.ExecuteScalar();
+
+                if (result != null)
+                {
+                    return Convert.ToInt32(result);
+                }
+                else
+                {
+                    return -1;
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка при получении ранга игрока", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return -1;
+            }
+        }
     }
 }

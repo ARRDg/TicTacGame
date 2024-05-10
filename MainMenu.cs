@@ -6,7 +6,7 @@ namespace TicTacGame
 {
     public partial class MainMenu : Form
     {
-        static public int id, win, lose, draw, matches;
+        static public int id, win, lose, draw, matches, rank;
         static public string date;
         public MainMenu()
         {
@@ -17,7 +17,7 @@ namespace TicTacGame
         {
             id = UpdateStats.GetPlayerID(Form1.currentLogin);
             GetDataPlayer();
-            SetDataPlayer();
+            SetDataUIPlayer();
         }
         private void guna2TabControl1_Click(object sender, EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace TicTacGame
                 if (guna2TabControl1.SelectedIndex == 1)
                 {
                     GetDataPlayer();
-                    SetDataPlayer();
+                    SetDataUIPlayer();
                 }
             }
             else
@@ -41,8 +41,25 @@ namespace TicTacGame
             Application.Exit();
         }
 
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            GameField.botDifficulty = 75;
+            Form MM = new GameField();
+            MM.Show();
+            Hide();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            GameField.botDifficulty = 95;
+            Form MM = new GameField();
+            MM.Show();
+            Hide();
+        }
+
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
+            GameField.botDifficulty = 55;
             Form MM = new GameField();
             MM.Show();
             Hide();
@@ -58,23 +75,25 @@ namespace TicTacGame
             return formattedDate;
         }
 
-        private void GetDataPlayer()
+        public void GetDataPlayer()
         {
             date = UpdateStats.GetPlayerDate(id);
             win = UpdateStats.GetPlayerWin(id);
             lose = UpdateStats.GetPlayerLose(id);
             draw = UpdateStats.GetPlayerDraw(id);
             matches = UpdateStats.GetPlayerMatches(id);
+            rank = UpdateStats.GetPlayerRank(id);
 
             date = ConvertDate(date);
         }
-        private void SetDataPlayer()
+        private void SetDataUIPlayer()
         {
             label3.Text = date;
             label6.Text = win.ToString();
             label8.Text = lose.ToString();
             label10.Text = draw.ToString();
             label5.Text = matches.ToString();
+            label14.Text = rank.ToString();
         }
     }
 }
